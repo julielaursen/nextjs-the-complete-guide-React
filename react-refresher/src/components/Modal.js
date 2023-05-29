@@ -1,11 +1,9 @@
 function Modal(props) {
   function cancelHandler() {
-    console.log('click cancel')
     props.onCancel()
   }
 
   function confirmHandler() {
-    console.log('click confirm')
     props.onConfirm()
   }
 

@@ -1,5 +1,9 @@
 function Backdrop(props) {
-  return <div className="backdrop" onClick={props.onClick} />
+  function cancelHandler() {
+    props.onCancel()
+  }
+
+  return <div className="backdrop" onClick={cancelHandler}></div>
 }
 
 export default Backdrop
