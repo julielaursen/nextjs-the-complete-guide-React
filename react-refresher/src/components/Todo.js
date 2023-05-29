@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Modal from './Modal'
-import Backdrop from './Modal'
+import Backdrop from './Backdrop'
 
 function Todo(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -9,6 +9,9 @@ function Todo(props) {
     setModalIsOpen(true)
   }
 
+  function closeModalHandler() {
+    setModalIsOpen(false)
+  }
   return (
     <div className="card">
       <h2>{props.text}</h2>
@@ -18,7 +21,7 @@ function Todo(props) {
         </button>
       </div>
       {modalIsOpen && <Modal />}
-      {modalIsOpen && <Backdrop />}
+      {modalIsOpen && <Backdrop onClick={closeModalHandler} />}
     </div>
   )
 }
