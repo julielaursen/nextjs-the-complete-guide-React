@@ -24,7 +24,7 @@ export function FavoritesContextProvider(props) {
   }
 
   function itemIsFavoriteHandler(meetupId) {
-    return userFavorites.some((meetup) => meetup.id !== meetupId)
+    return userFavorites.some((meetup) => meetup.id === meetupId)
   }
 
   const context = {
